@@ -6,17 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
         function invertirCadena(){
-            let cadena = document.getElementById("cadena");
-            let let area = document.getElementById("area");
+            let cadena = document.getElementById("cadena").value;
+            let area = document.getElementById("area");
 
             let array = cadena.split("");
-            let array2 =[];
-
-            for (let i = 0; i < array.length; i++) {
-                let
-                
-            }
+            //invertimos la cadena
+            let cadena2 = invertirCadenaP(array);
+            //imprimimos por pantalla
+            area.value = cadena2;
+            console.log(array.length);
         }
+        function invertirCadenaP(array){
+            let cadena2="";
+            for (let i = array.length-1; i >= 0; i--) {
+                console.log(array[i]);
+                cadena2 += array[i];
+            }
+            return cadena2;
+        }
+        
     </script>
     <title>Document</title>
 </head>
